@@ -1,10 +1,6 @@
-import Component from './components/indes'; 
-function App() {
-  return (
-    <>
-      <Component className="" />
-    </>
-  );
-}
+import StationMap from './components/StationMap';
 
+function App() {
+  return <StationMap />;
+}
 export default App;
