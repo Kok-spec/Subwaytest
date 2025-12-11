@@ -1,9 +1,8 @@
-import Component from './components/indes.tsx';
-
+import Component from './components/indes'; 
 function App() {
   return (
     <>
-      <Component className={''} />
+      <Component className="" />
     </>
   );
 }

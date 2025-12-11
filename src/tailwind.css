@@ -1,16 +1,29 @@
+/* Tailwindの必須ディレクティブ */
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* カスタムコンポーネントレイヤー */
 @layer components {
   .all-\[unset\] {
     all: unset;
   }
 }
 
+/* 高さ連鎖（Canvasが高さ0にならないために必須） */
+html, body, #root {
+  height: 100%;
+}
+#root {
+  display: flex; /* 必要ならflexで子要素を伸ばしやすく */
+}
+
+/* アニメーション変数 */
 :root {
   --animate-spin: spin 1s linear infinite;
 }
 
+/* カスタムアニメーションクラス */
 .animate-fade-in {
   animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
 }
@@ -35,6 +48,7 @@
   animation: var(--animate-spin);
 }
 
+/* Keyframes定義 */
 @keyframes spin {
   to {
     transform: rotate(1turn);
@@ -46,12 +60,10 @@
     opacity: 0;
     animation-timing-function: cubic-bezier(0.74, 0.25, 0.76, 1);
   }
-
   10% {
     opacity: 0.7;
     animation-timing-function: cubic-bezier(0.12, 0.01, 0.08, 0.99);
   }
-
   to {
     opacity: 0.4;
   }
@@ -62,7 +74,6 @@
     opacity: 0;
     transform: translateY(-10px);
   }
-
   to {
     opacity: 1;
     transform: none;
@@ -74,7 +85,6 @@
     opacity: 0;
     transform: translateY(20px);
   }
-
   to {
     opacity: 1;
     transform: none;
@@ -82,14 +92,10 @@
 }
 
 @keyframes shimmer {
-  0%,
-  90%,
-  to {
+  0%, 90%, to {
     background-position: calc(-100% - var(--shimmer-width)) 0;
   }
-
-  30%,
-  60% {
+  30%, 60% {
     background-position: calc(100% + var(--shimmer-width)) 0;
   }
 }
@@ -98,7 +104,6 @@
   0% {
     transform: translate(0);
   }
-
   to {
     transform: translateX(calc(-100% - var(--gap)));
   }
@@ -108,8 +113,7 @@
   0% {
     transform: translateY(0);
   }
-
   to {
     transform: translateY(calc(-100% - var(--gap)));
-  }
+   }
 }

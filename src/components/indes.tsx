@@ -53,7 +53,7 @@ function StationMap({ className = "" }: Props) {
       />
 
       {/* 画像出力 */}
-      <div className="absolute w-[45.77%] h-[49.55%] top-[34.74%] left-[18.22%] bg-color-icon-disabled-default">
+      <div className="absolute w-[35.88%] h-[66.03%] top-[29.08%] left-[12.00%]">
         <PanoramaViewer viewIndex={viewIndex} />
       </div>
     </div>
