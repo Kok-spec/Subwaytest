@@ -5,10 +5,17 @@
   .all-\[unset\] {
     all: unset;
   }
+  .selected-button {
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px var(--selected-ring-color);
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+  }
 }
 
 :root {
   --animate-spin: spin 1s linear infinite;
+  --selected-ring-color: #ff0000;
 }
 
 .animate-fade-in {
