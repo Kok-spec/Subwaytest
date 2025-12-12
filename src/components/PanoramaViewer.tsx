@@ -7,7 +7,7 @@ interface Props {
   viewIndex: number;
 }
 
-function PanoramaViewer({ viewIndex }: Props) {
+function PanoramaViewer({ viewIndex}: Props) {
   const images = [
     '/images/大谷地駅1.jpg',
     '/images/大谷地駅2.jpg',
