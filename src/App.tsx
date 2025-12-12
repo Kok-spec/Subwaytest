@@ -1,6 +1,12 @@
-import StationMap from './components/StationMap';
+import StationMap from "./components/StationMap";
+import './tailwind.css'
 
 function App() {
-  return <StationMap />;
+  return (
+    <div className="App">
+      <StationMap />
+    </div>
+  );
 }
+
 export default App;
